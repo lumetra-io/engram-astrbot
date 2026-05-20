@@ -1,4 +1,4 @@
-# astrbot_plugin_engram
+# astrbot_plugin_lumetra_engram
 
 Long-term memory for [AstrBot](https://github.com/AstrBotDevs/AstrBot), powered by [Lumetra Engram](https://lumetra.io). Adds two slash commands and optional silent auto-archive of every chat message.
 
@@ -24,15 +24,15 @@ When `auto_archive: true` is set in the plugin config, every non-command message
 
 ```bash
 cd /path/to/AstrBot/data/plugins
-git clone https://github.com/lumetra-io/engram-astrbot.git astrbot_plugin_engram
-pip install -r astrbot_plugin_engram/requirements.txt
+git clone https://github.com/lumetra-io/engram-astrbot.git astrbot_plugin_lumetra_engram
+pip install -r astrbot_plugin_lumetra_engram/requirements.txt
 ```
 
 Restart AstrBot (or hit **Reload Plugins** in the WebUI).
 
 ## Configure
 
-In the AstrBot WebUI, open **Plugins -> Engram Memory -> Config**, or edit `data/config/astrbot_plugin_engram_config.json` directly.
+In the AstrBot WebUI, open **Plugins -> Engram Memory -> Config**, or edit `data/config/astrbot_plugin_lumetra_engram_config.json` directly.
 
 | Key | Default | Notes |
 | --- | --- | --- |

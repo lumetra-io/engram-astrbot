@@ -25,7 +25,7 @@ from astrbot.api.event import AstrMessageEvent, filter
 from astrbot.api.star import Context, Star, register
 
 
-PLUGIN_NAME = "astrbot_plugin_engram"
+PLUGIN_NAME = "astrbot_plugin_lumetra_engram"
 PLUGIN_VERSION = "v0.1.0"
 DEFAULT_BASE = "https://api.lumetra.io"
 _SAFE_BUCKET = re.compile(r"[^a-zA-Z0-9._-]+")
@@ -39,7 +39,7 @@ def _slug(value: str, fallback: str = "anon") -> str:
 
 
 @register(
-    "astrbot_plugin_engram",
+    "astrbot_plugin_lumetra_engram",
     "Lumetra",
     "Durable, explainable long-term memory for AstrBot via Lumetra Engram.",
     PLUGIN_VERSION,

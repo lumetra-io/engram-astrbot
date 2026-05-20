@@ -1,4 +1,4 @@
-name: astrbot_plugin_engram
+name: astrbot_plugin_lumetra_engram
 display_name: Engram Memory
 desc: Durable, explainable long-term memory for AstrBot, backed by Lumetra's hosted Engram service. Adds /remember and /recall commands and optional auto-archive of every chat message.
 short_desc: Long-term memory for AstrBot via Lumetra Engram.
