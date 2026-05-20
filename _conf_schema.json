@@ -1,0 +1,50 @@
+{
+  "api_key": {
+    "description": "Engram API key (eng_live_... or test key). If left blank, the ENGRAM_API_KEY environment variable is used.",
+    "type": "string",
+    "default": "",
+    "hint": "Create one at https://lumetra.io/app/api-keys. Stored in AstrBot's plugin config under data/config/."
+  },
+  "base_url": {
+    "description": "Engram API base URL. Use the default unless you are self-hosting.",
+    "type": "string",
+    "default": "https://api.lumetra.io",
+    "hint": "No trailing slash."
+  },
+  "default_bucket": {
+    "description": "Bucket name used when a message has no obvious per-user or per-chat bucket.",
+    "type": "string",
+    "default": "astrbot",
+    "hint": "Buckets are created lazily on first write."
+  },
+  "bucket_strategy": {
+    "description": "How to derive a bucket name for /remember, /recall, and auto-archive.",
+    "type": "string",
+    "default": "per_user",
+    "options": ["per_user", "per_chat", "fixed"],
+    "hint": "per_user = one bucket per sender id; per_chat = one bucket per group/session; fixed = always use default_bucket."
+  },
+  "bucket_prefix": {
+    "description": "Optional prefix prepended to every bucket name (useful when sharing one Engram tenant across bots).",
+    "type": "string",
+    "default": "astrbot",
+    "hint": "Final bucket = {bucket_prefix}-{user_or_chat_id} (or just bucket_prefix if strategy=fixed)."
+  },
+  "auto_archive": {
+    "description": "If true, every incoming chat message is stored to Engram in the background. Off by default.",
+    "type": "bool",
+    "default": false,
+    "hint": "Adds one Engram store call per message. Respects bucket_strategy."
+  },
+  "auto_archive_min_length": {
+    "description": "Skip auto-archive for messages shorter than this many characters.",
+    "type": "int",
+    "default": 8,
+    "hint": "Avoids storing trivial 'ok', 'lol', emoji-only messages."
+  },
+  "timeout_seconds": {
+    "description": "HTTP timeout for Engram API calls.",
+    "type": "int",
+    "default": 30
+  }
+}
