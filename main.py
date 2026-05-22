@@ -118,7 +118,7 @@ class EngramPlugin(Star):
 
     async def _query(self, bucket: str, query: str) -> tuple[int, dict | str]:
         # NB: Engram expects `query`, not `question`.
-        return await self._post("/v1/query", {"query": query, "bucket": bucket})
+        return await self._post("/v1/query", {"query": query, "buckets": [bucket]})
 
     # -------- commands --------
 
